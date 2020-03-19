@@ -19,6 +19,7 @@ function [R,t] = estimateCamera2(xy,XYZ)
     R = Gram_Schmidt(R); 
     t = M(:,end)
 end
+
 function [Q] = Gram_Schmidt(A)
     [m,n] = size(A); Q = zeros(m,n); R = zeros(n,n);
     for i=1:n
